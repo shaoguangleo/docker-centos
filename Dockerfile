@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:7.4.1708
 MAINTAINER sgguo@shao.ac.cn
 
 RUN yum update
