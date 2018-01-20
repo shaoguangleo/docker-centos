@@ -8,3 +8,14 @@ The image is built on top of the most recently `centos` image and installs the f
 - `gcc`
 
 The packages are selected for common use in the future. 
+
+# How to run
+
+Just type the following commands
+
+```
+$ make
+$ docker run -it shaoguangleo/centos[:version]
+```
+
+As we all know, the version can be `lateset` or `$ cat VERSION`
