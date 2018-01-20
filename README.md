@@ -19,3 +19,7 @@ $ docker run -it shaoguangleo/centos[:version]
 ```
 
 As we all know, the version can be `lateset` or `$ cat VERSION`
+
+# travis
+
+[![Build Status](https://www.travis-ci.org/shaoguangleo/docker-centos.svg?branch=master)](https://www.travis-ci.org/shaoguangleo/docker-centos)
