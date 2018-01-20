@@ -6,6 +6,8 @@ The image is built on top of the most recently `centos` image and installs the f
 
 - `vim`
 - `gcc`
+- `libX11-devel`
+- `gcc-gfortran`
 
 The packages are selected for common use in the future. 
 
