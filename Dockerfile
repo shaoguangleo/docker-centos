@@ -11,4 +11,18 @@ RUN yum update -y \
     && yum install -y make \
     && yum install -y libX11-devel\
     && yum install -y gcc-gfortran\
+    && yum install -y subversion\
+    && yum install -y pkgconfig\
+    && yum install -y bison\
+    && yum install -y flex\
+    && yum install -y fftw\
+    && yum install -y openmpi\
+    && yum install -y openmpi-devel\
+    && yum install -y libtool\
+    && yum install -y automake\
+    && yum install -y autoconf\
+    && yum install -y expat\
+    && yum install -y expat-devel\
+    && yum install -y python\
+    && yum install -y rpcbind\
     && rm -rf /var/lib/yum/yumdb/*
