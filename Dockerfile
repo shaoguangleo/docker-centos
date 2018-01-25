@@ -8,6 +8,7 @@ RUN yum update -y \
     && yum upgrade -y \
     && yum install -y vim \
     && yum install -y gcc \
+    && yum install -y gcc-c++ \
     && yum install -y make \
     && yum install -y libX11-devel\
     && yum install -y gcc-gfortran\
@@ -16,6 +17,7 @@ RUN yum update -y \
     && yum install -y bison\
     && yum install -y flex\
     && yum install -y fftw\
+    && yum install -y wget\
     && yum install -y openmpi\
     && yum install -y openmpi-devel\
     && yum install -y libtool\
