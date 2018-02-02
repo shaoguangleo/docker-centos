@@ -24,6 +24,7 @@ RUN yum update -y \
     && yum install -y openmpi-devel\
     && yum install -y libtool\
     && yum install -y automake\
+    && yum install -y cmake\
     && yum install -y autoconf\
     && yum install -y expat\
     && yum install -y expat-devel\
