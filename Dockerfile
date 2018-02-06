@@ -30,6 +30,7 @@ RUN yum update -y \
     && yum install -y expat\
     && yum install -y expat-devel\
     && yum install -y python\
+    && yum install -y ipython\
     && yum install -y python34-pip python2-pip \
     && yum install -y rpcbind\
     && rm -rf /var/lib/yum/yumdb/*
