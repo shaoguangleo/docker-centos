@@ -22,7 +22,7 @@ RUN yum update -y \
     && yum install -y wget\
     && yum install -y openmpi\
     && yum install -y openmpi-devel\
-    && yum install -y libtool\
+    && yum install -y libtool*\
     && yum install -y automake\
     && yum install -y cmake\
     && yum install -y boost\
