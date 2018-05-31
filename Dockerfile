@@ -18,7 +18,10 @@ RUN yum update -y \
     && yum install -y pkgconfig\
     && yum install -y bison\
     && yum install -y flex\
-    && yum install -y fftw\
+    && yum install -y fftw fftw-devel\
+    && yum install -y glib glib-devel\
+    && yum install -y cfitsio cfitsio-devel\
+    && yum install -y libpng libpng-devel\
     && yum install -y wget\
     && yum install -y openmpi\
     && yum install -y openmpi-devel\
@@ -30,7 +33,9 @@ RUN yum update -y \
     && yum install -y expat\
     && yum install -y expat-devel\
     && yum install -y python\
+    && yum install -y python-devel\
     && yum install -y ipython\
     && yum install -y python34-pip python2-pip \
     && yum install -y rpcbind\
+    && yum install -y numpy numpy-f2py scipy\
     && rm -rf /var/lib/yum/yumdb/*
