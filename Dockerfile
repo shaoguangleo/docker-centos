@@ -4,6 +4,8 @@ MAINTAINER [Guo Shaoguang] <sgguo@shao.ac.cn>
 LABEL version="0.1"
 LABEL description="Base CentOS Image"
 
+COPY src/fftw-3.3.3.tar.gz /tmp/
+
 RUN yum update -y \
     && yum upgrade -y \
     && yum install -y vim \
@@ -19,6 +21,21 @@ RUN yum update -y \
     && yum install -y bison\
     && yum install -y flex\
     && yum install -y fftw fftw-devel\
+    && cd /tmp \
+    && tar zxvf fftw-3.3.3.tar.gz \
+    && cd /tmp/fftw-3.3.3 \
+    && ./configure --enable-shared --enable-threads --enable-float\
+    && make -j 2\
+    && make install\
+    && make clean\
+    && ./configure --enable-shared --enable-threads --enable-long-double\
+    && make -j 4\
+    && make install\
+    && make clean\
+    && ./configure --enable-sse2 --enable-avx\
+    && make -j 4\
+    && make install\
+    && make clean\
     && yum install -y glib glib-devel\
     && yum install -y glib2 glib2-devel\
     && yum install -y cfitsio cfitsio-devel\
